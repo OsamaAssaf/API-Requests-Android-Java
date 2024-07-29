@@ -1,7 +1,5 @@
 package com.assaf.androidcallapi.repositories.users;
 
-import android.content.Context;
-
 import com.assaf.androidcallapi.models.User;
 import com.assaf.androidcallapi.repositories.DataCallback;
 import com.assaf.androidcallapi.repositories.NetworkCallback;
@@ -33,7 +31,6 @@ public class UsersApi implements UsersRepository {
                 }.getType();
                 final ArrayList<User> users = gson.fromJson(responseData, type);
                 callback.onSuccess(users);
-                System.out.println("users: " + users.size());
             }
 
             @Override
